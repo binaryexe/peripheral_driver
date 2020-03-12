@@ -12,4 +12,16 @@ $ sudo insmod peripheral_driver_main.ko
 To see if module is available:
 $ lsmod | more
 
+To check the build driver:
+
+cat /pro
+
+To write to driver:
+echo hi > /dev/mynull 
+
+To Read from driver:
+cat /dev/mynull
+
+To see if device class is part of driver list:
+cat /proc/devices
 
