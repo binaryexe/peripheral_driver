@@ -1,0 +1,15 @@
+To build the kernel module:
+$ make -C /lib/modules/$(uname -r)/build M=$PWD modules
+
+To remove the kernel Module:
+
+$ sudo rmmod peripheral_driver_main.ko
+
+To load the kernel module:
+
+$ sudo insmod peripheral_driver_main.ko
+
+To see if module is available:
+$ lsmod | more
+
+
