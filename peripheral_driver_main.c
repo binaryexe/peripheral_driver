@@ -59,9 +59,12 @@ static int __init ppdd_init(void)
      * registers the cnt number of device file numbers starting from
      * <the free major, firstminor>, with the name. */
     /* Registers a range of char device numbers */
+<<<<<<< HEAD
     /* When you load driver and run the command 'cat /proc/devices'
      * you can see the driver name 'bx'
      */
+=======
+>>>>>>> ec9395ccfbc37f6ab1285857f07cff56d2a9ebb3
     if ((ret = alloc_chrdev_region(&dev_num, 0, 3, "bx")) < 0)
     {
         return ret;
@@ -100,10 +103,13 @@ static int __init ppdd_init(void)
 static void __exit ppdd_exit(void)
 {
     printk(KERN_INFO "PPDD Exit Called");
+<<<<<<< HEAD
     cdev_del(&c_dev);
     device_destroy(cl, dev_num);
     class_destroy(cl);
     unregister_chrdev_region(dev_num, 1);
+=======
+>>>>>>> ec9395ccfbc37f6ab1285857f07cff56d2a9ebb3
 }
 
 module_init(ppdd_init);
