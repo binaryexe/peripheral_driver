@@ -1,1 +1,0 @@
-obj-m := peripheral_driver.c
